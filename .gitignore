@@ -1,0 +1,25 @@
+# --- Python environments ---
+.venv/
+.venv311/
+__pycache__/
+*.pyc
+
+# --- Generated pipeline data (fully reproducible, see README) ---
+# Fetched KiCad board repos (02_fetch_gerbers.py)
+.cache_repos/
+# Per-board build artifacts: gerbers, meshes, STLs (02-08 scripts)
+boards/
+# Rendered dataset: band images, GT masks, height maps, manifest (09_batch.py)
+out/
+# Machine-local environment report (01_verify_env.py)
+env.json
+
+# --- Trained model artifacts (train/train.py) ---
+train/checkpoints/
+train/eval_out/
+train/__pycache__/
+
+# --- Editor / OS / IDE ---
+.DS_Store
+.idea/
+.claude/settings.local.json
